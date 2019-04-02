@@ -1,0 +1,20 @@
+#Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.
+#Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+#Expected Output : ['Green', 'White', 'Black']
+
+
+print('*********Please input atleast 6 elements for list; seperated by space*******')
+promptInput=raw_input()
+gvnList=promptInput.split()
+
+del gvnList[0]
+del gvnList[3] # after previous deletes index will shift left
+del gvnList[3] # after previous deletes index will shift left
+
+# we can also do by identifying the elements at the given positions and use remove function,
+# but in case of duplicate values before given index, wrong value will be removed.
+
+print("after deleting 0th, 4th and 5th elements from the given list")
+
+print(gvnList)
+

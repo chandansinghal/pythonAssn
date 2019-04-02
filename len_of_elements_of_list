@@ -1,0 +1,13 @@
+#Write a Python program to find the length of all words of a list
+
+#taking input
+print('please input elements to form a list')
+promptInput=raw_input()
+gvnList=promptInput.split()
+
+convStr=''
+convStr=convStr.join(gvnList)
+
+print('combined length of all the elements in list is - ')
+
+print(len(convStr))

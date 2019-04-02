@@ -1,0 +1,79 @@
+"""
+WAP to create a nested array with info -
+- Enter student full name, age, class:
+Repeat 5 times
+
+o/p :
+- Total students :
+Student first name in sorted order
+student last name reverse word
+sum of of age of students
+
+"""
+masStu=[]
+# Inputs
+print('**********How many records you want to insert***********')
+l=int(input())
+
+a=0
+while a!=l:
+    print('*********Please input FullName, Age and Class; seperated by space*******')
+    promptInput=raw_input()
+    stuLis1=promptInput.split()
+    masStu.append(stuLis1)
+    a+=1
+"""
+#Second input
+print('Please input FullName, Age and Class; seperated by comma')
+promptInput=raw_input()
+stuLis2=promptInput.split()
+masStu.append(stuLis2)
+
+#Third input
+
+print('Please input FullName, Age and Class; seperated by comma')
+promptInput=raw_input()
+stuLis3=promptInput.split()
+masStu.append(stuLis3)
+
+
+print("Students:", masStu)
+
+print('masStu type: ',type(masStu))
+masStu.sort()
+print("sorted order:", masStu)
+"""
+
+masStu.sort()  #sorting input data lists
+#l=len(masStu)  #Numbers of records inserted
+# First O/P number of students.
+print('***************************Number of student records inserted: \n = #',l )
+
+#Second O/PStudents name in ascending order
+print('***************************Students first name in ascending order*************************')
+a=0
+while a!=l:
+    print(masStu[a][0:2])
+    a+=1
+
+
+
+#Third O/P - Last name in reverse word
+print('***************************Students last name in reverse word******************************')
+a=0
+while a!=l:
+    strTemp=masStu[a][1]
+    print(strTemp[-1::-1])
+    a+=1
+
+
+#Fourth O/P - Sum of ages entered
+ageSum=0
+a=0
+while a!=l:
+    ageSum+=int(masStu[a][2])
+    a+=1
+
+print('***************************** Total sum of students age is = ',ageSum)
+
+
